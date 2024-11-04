@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177448860880",
+    "project_id": "sriendo-e05f4",
+    "storage_bucket": "sriendo-e05f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177448860880:android:162759e48e6f54a704f2d5",
+        "android_client_info": {
+          "package_name": "com.sriendo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvGdYIDRk_6UJhCQfHqPlzAt_mWD_r6YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
