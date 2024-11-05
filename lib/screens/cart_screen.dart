@@ -1,4 +1,3 @@
-// File: lib/screens/cart_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controllers/cart_controller.dart';
 import 'package:flutter_application_1/widget/cart_item_widget.dart';
@@ -21,7 +20,7 @@ class CartScreen extends StatelessWidget {
             child: Text('Keranjang belanja kosong'),
           );
         }
-        
+
         return Column(
           children: [
             Expanded(
@@ -31,6 +30,30 @@ class CartScreen extends StatelessWidget {
                   final item = cartController.items[index];
                   return CartItemWidget(item: item);
                 },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    'Total: Rp ${cartController.total.toStringAsFixed(2)}',
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: () async {
+                      await cartController.reduceStock();
+                      // Lanjutkan ke halaman pembayaran atau tampilkan pesan sukses
+                      Get.snackbar('Berhasil', '');
+                    },
+                    child: const Text('Lanjut ke Pembayaran'),
+                  ),
+                ],
               ),
             ),
           ],
