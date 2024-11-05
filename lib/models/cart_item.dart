@@ -1,4 +1,3 @@
-// File: lib/models/cart_item.dart
 import 'package:flutter_application_1/models/product.dart';
 
 class CartItem {
@@ -13,13 +12,16 @@ class CartItem {
   });
 
   double get total => product.price * quantity;
+
+  // Tambahkan fungsi ini jika ingin menambah kuantitas
+  void incrementQuantity() {
+    quantity++;
+  }
+
+  // Tambahkan fungsi ini jika ingin mengurangi kuantitas
+  void decrementQuantity() {
+    if (quantity > 1) {
+      quantity--;
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
